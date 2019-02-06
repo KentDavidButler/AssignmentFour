@@ -1,0 +1,7 @@
+C:\Users\Administrator\source\repos\GrandCircus\AssignmentFour\AssignmentFour-Rythms\bin\Debug\AssignmentFour-Rythms.exe.config
+C:\Users\Administrator\source\repos\GrandCircus\AssignmentFour\AssignmentFour-Rythms\bin\Debug\AssignmentFour-Rythms.exe
+C:\Users\Administrator\source\repos\GrandCircus\AssignmentFour\AssignmentFour-Rythms\bin\Debug\AssignmentFour-Rythms.pdb
+C:\Users\Administrator\source\repos\GrandCircus\AssignmentFour\AssignmentFour-Rythms\obj\Debug\AssignmentFour-Rythms.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\GrandCircus\AssignmentFour\AssignmentFour-Rythms\obj\Debug\AssignmentFour-Rythms.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\GrandCircus\AssignmentFour\AssignmentFour-Rythms\obj\Debug\AssignmentFour-Rythms.exe
+C:\Users\Administrator\source\repos\GrandCircus\AssignmentFour\AssignmentFour-Rythms\obj\Debug\AssignmentFour-Rythms.pdb
