@@ -44,24 +44,39 @@ namespace AssignmentFour_Rythms
 
                 } while (!passed && maxRandomNum >= 1);
             }
-
+            Console.WriteLine("");
+            
+            //linear search
             List<int> eachCounts = new List<int> { };
             Guesser Brute = new BruteGuesser(maxRandomNum, timesToRun);
             Brute.RunNTimes(random);
             Brute.PrintStats();
 
+            //truely random using the random class to generate guesses
             Guesser Rando = new RandomGuesser(maxRandomNum, timesToRun);
             Rando.RunNTimes(random);
             Rando.PrintStats();
 
+            //This is a random guesser but reduces the range of guesses
+            //depending on if the guess was to high or to low. If too high
+            //the range will take the guessed number, and allow for another
+            //random number to guess between 1 and the first random num.
             Guesser HighLow = new HighOrLowerGuesser(maxRandomNum, timesToRun);
             HighLow.RunNTimes(random);
             HighLow.PrintStats();
 
+            //Standard Binary search given in class and adopted for project
             Guesser Binary = new BinaryGuess(maxRandomNum, timesToRun);
             Binary.RunNTimes(random);
             Binary.PrintStats();
 
+            //Jump guesser, Jumps up through the numbers by  maxRandomNum/10
+            //until the target is passed. Once passed Jump is set to 5, and then
+            //the guesser backtracks by 3, if we backtrack too far, we then jump up
+            //by five, and then back by three (if needed) until target is aquired.
+            Guesser Jump = new JumpGuesser(maxRandomNum, timesToRun);
+            Jump.RunNTimes(random);
+            Jump.PrintStats();
         }
 
         private static bool YesOrNo()

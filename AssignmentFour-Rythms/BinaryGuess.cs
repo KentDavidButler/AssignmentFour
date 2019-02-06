@@ -33,15 +33,7 @@ namespace AssignmentFour_Rythms
             return BinarySearchRecursive(target, 1, MaxRandomNum);
         }
 
-        public override void RunNTimes(Random random)
-        {
-            for (int i = 0; i < TimesRoRun; i++)
-            {
-                RunOnce(random);
-                SetLoopStats();
-            }
-        }
-
+        //pulled from slides and slightly edited
         public int BinarySearchRecursive( int target, int min, int max)
         {
             CurrentCount++;

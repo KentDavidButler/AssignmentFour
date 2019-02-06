@@ -18,7 +18,6 @@ namespace AssignmentFour_Rythms
         protected List<int> EachCounts = new List<int> { };
 
         public abstract int RunOnce(Random random);
-        public abstract void RunNTimes(Random random);
 
         public void PrintStats()
         {
@@ -41,6 +40,14 @@ namespace AssignmentFour_Rythms
             }
             EachCounts.Add(CurrentCount);
             this.CurrentCount = 0;
+        }
+        public void RunNTimes(Random random)
+        {
+            for (int i = 0; i < TimesRoRun; i++)
+            {
+                RunOnce(random);
+                SetLoopStats();
+            }
         }
     }
 }

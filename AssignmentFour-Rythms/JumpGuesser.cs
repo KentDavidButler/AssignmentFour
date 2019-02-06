@@ -6,35 +6,48 @@ using System.Threading.Tasks;
 
 namespace AssignmentFour_Rythms
 {
-    class RandomGuesser : Guesser
+    class JumpGuesser : Guesser
     {
-        public RandomGuesser()
+        private int Jump { get; set; }
+        public JumpGuesser()
         {
-            this.Name = "RandomGuesser";
+            this.Name = "Jump Guesser";
             this.CurrentCount = 0;
             this.MaxRandomNum = 100;
             this.TimesRoRun = 100;
             this.Min = this.MaxRandomNum;
+            this.Jump = MaxRandomNum / 10;
         }
 
-        public RandomGuesser(int MaxRandomNum, int TimesRoRun)
+        public JumpGuesser(int MaxRandomNum, int TimesRoRun)
         {
-            this.Name = "RandomGuesser";
+            this.Name = "Jump Guesser";
             this.CurrentCount = 0;
             this.MaxRandomNum = MaxRandomNum;
             this.TimesRoRun = TimesRoRun;
             this.Min = this.MaxRandomNum;
-
+            this.Jump = MaxRandomNum / 10;
         }
 
         public override int RunOnce(Random random)
         {
+
             int target = random.Next(1, MaxRandomNum + 1);
-            int guess = random.Next(1, MaxRandomNum + 1);
+            int guess = 1;
+
             while (guess != target)
             {
                 CurrentCount++;
-                guess = random.Next(1, MaxRandomNum + 1);
+                if (guess < target)
+                {
+                    guess += Jump;
+                }
+                else
+                {
+                    //once we passed the target we reduce the amount being jumped by
+                    Jump = 5;
+                    guess -= 3;
+                }
             }
             if (CurrentCount == 0)
                 CurrentCount++;
@@ -43,3 +56,4 @@ namespace AssignmentFour_Rythms
 
     }
 }
+

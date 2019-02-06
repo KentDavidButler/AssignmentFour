@@ -43,13 +43,5 @@ namespace AssignmentFour_Rythms
             return CurrentCount;
         }
 
-        public override void RunNTimes(Random random)
-        {
-            for (int i = 0; i < TimesRoRun; i++)
-            {
-                Console.WriteLine(RunOnce(random));
-                SetLoopStats();
-            }
-        }
     }
 }
