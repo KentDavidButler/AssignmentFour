@@ -77,6 +77,14 @@ namespace AssignmentFour_Rythms
             Guesser Jump = new JumpGuesser(maxRandomNum, timesToRun);
             Jump.RunNTimes(random);
             Jump.PrintStats();
+
+
+            //similar to brute but has an array of Primes, first works
+            //through the prime array, if the return is greater than target
+            //the guess get decrimeted by one until target is hit.
+            Guesser Prime = new PrimeGuesser(maxRandomNum, timesToRun);
+            Prime.RunNTimes(random);
+            Prime.PrintStats();
         }
 
         private static bool YesOrNo()

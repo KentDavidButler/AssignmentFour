@@ -19,6 +19,15 @@ namespace AssignmentFour_Rythms
 
         public abstract int RunOnce(Random random);
 
+        public void RunNTimes(Random random)
+        {
+            for (int i = 0; i < TimesRoRun; i++)
+            {
+                RunOnce(random);
+                SetLoopStats();
+            }
+        }
+
         public void PrintStats()
         {
             this.Average = (EachCounts.Sum() / TimesRoRun) * 1.0;
@@ -28,6 +37,7 @@ namespace AssignmentFour_Rythms
             Console.WriteLine($"Max: {this.Max}");
             Console.WriteLine();
         }
+
         public void SetLoopStats()
         {
             if (CurrentCount < Min)
@@ -40,14 +50,6 @@ namespace AssignmentFour_Rythms
             }
             EachCounts.Add(CurrentCount);
             this.CurrentCount = 0;
-        }
-        public void RunNTimes(Random random)
-        {
-            for (int i = 0; i < TimesRoRun; i++)
-            {
-                RunOnce(random);
-                SetLoopStats();
-            }
         }
     }
 }

@@ -48,6 +48,7 @@
     <Compile Include="Guesser.cs" />
     <Compile Include="HighOrLowerGuesser.cs" />
     <Compile Include="JumpGuesser.cs" />
+    <Compile Include="PrimeGuesser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomGuesser.cs" />
