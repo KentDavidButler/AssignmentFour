@@ -23,7 +23,7 @@ namespace AssignmentFour_Rythms
             this.CurrentCount = 0;
             this.MaxRandomNum = MaxRandomNum;
             this.TimesRoRun = TimesRoRun;
-            this.Min = 999999999; //for some reason wasn't working like rest of values
+            this.Min = MaxRandomNum;
             this.Max = 0;
         }
 
@@ -32,7 +32,7 @@ namespace AssignmentFour_Rythms
         {
             int target = random.Next(1, MaxRandomNum + 1);
 
-            for (int j = TimesRoRun; j > 0; j--)
+            for (int j = MaxRandomNum; j > 0; j--)
             {
                 CurrentCount++;
                 if (j == target)
